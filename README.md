@@ -26,10 +26,11 @@ Copy `'sha1:xxxxx...'`, And paste the following at the end of
 `/root/.jupyter/jupyter_notebook_config.py`.
 
 ```
-c.NotebookApp.password = 'sha1:xxxxx...'
+docker-compose exec ml-container bash
+echo "c.NotebookApp.password = 'sha1:xxxxx...'" >> /root/.jupyter/jupyter_notebook_config.py
 ```
 
-restart container.
+Restart container.
 
 ```
 docker-compose stop
