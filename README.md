@@ -1,6 +1,6 @@
 # ml-template
 
-Docker template for machne learning.
+Docker template for machine learning.
 
 ## Usage
 
