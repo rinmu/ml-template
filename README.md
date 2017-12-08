@@ -10,10 +10,9 @@ Set password of Jupyter Notebook to environment variable.
 export JUPYTER_NOTEBOOK_PASSWORD="your_password"
 ```
 
-Start up docker container with Jupyter Notebook password.
+Start up docker container.
 
 ```
-docker-compose build
 docker-compose up -d
 ```
 
