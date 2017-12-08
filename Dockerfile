@@ -24,7 +24,8 @@ RUN pip --no-cache-dir install \
     numpy \
     scipy \
     gensim \
-    mecab-python3
+    mecab-python3 \
+    tensorflow
 
 ENV JUPYTER_NOTEBOOK_CONFIG /root/.jupyter/jupyter_notebook_config.py
 ENV IPYTHON_KERNEL_CONFIG /root/.ipython/profile_default/ipython_kernel_config.py

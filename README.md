@@ -22,8 +22,8 @@ Verify password:
 Out[2]: 'sha1:xxxxx...'
 ```
 
-Copy `'sha1:xxxxx...'`, And paste the following at the end of
-`/root/.jupyter/jupyter_notebook_config.py`.
+Copy `'sha1:xxxxx...'`, And append to
+`/root/.jupyter/jupyter_notebook_config.py` with the following command.
 
 ```
 docker-compose exec ml-container bash
