@@ -33,8 +33,7 @@ echo "c.NotebookApp.password = 'sha1:xxxxx...'" >> /root/.jupyter/jupyter_notebo
 Restart container.
 
 ```
-docker-compose stop
-docker-compose start
+docker-compose restart
 ```
 
 Access the following URL.
