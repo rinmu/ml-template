@@ -7,3 +7,5 @@ services:
     volumes:
       - "./notebooks:/notebooks"
     stdin_open: true
+    environment:
+      - JUPYTER_NOTEBOOK_PASSWORD

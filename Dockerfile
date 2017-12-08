@@ -27,17 +27,10 @@ RUN pip --no-cache-dir install \
     mecab-python3 \
     tensorflow
 
-ENV JUPYTER_NOTEBOOK_CONFIG /root/.jupyter/jupyter_notebook_config.py
+COPY jupyter_notebook_config.py /root/.jupyter/
+
 ENV IPYTHON_KERNEL_CONFIG /root/.ipython/profile_default/ipython_kernel_config.py
-
-RUN jupyter notebook --generate-config --allow-root && \
-    ipython profile create
-
-RUN echo "c.NotebookApp.ip = '*'" >>${JUPYTER_NOTEBOOK_CONFIG} && \
-    echo "c.NotebookApp.open_browser = False" >>${JUPYTER_NOTEBOOK_CONFIG} && \
-    echo "c.NotebookApp.iopub_data_rate_limit=10000000000" >>${JUPYTER_NOTEBOOK_CONFIG} && \
-    echo "c.MultiKernelManager.default_kernel_name = 'python3'" >>${JUPYTER_NOTEBOOK_CONFIG}
-
+RUN ipython profile create
 RUN echo "c.IPKernelApp.matplotlib = 'inline'" >>${IPYTHON_KERNEL_CONFIG}
 
 WORKDIR /notebooks
